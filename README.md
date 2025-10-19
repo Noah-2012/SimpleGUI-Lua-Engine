@@ -94,3 +94,34 @@ label:Margin(10, 10, 10, 10)
 
 The Margin function is structured and used in the following pattern: ````Margin(left, top, right, bottom)````
 As I mentioned, this function is used in every object and is the basic function for positioning objects.
+
+## SimpleGUI Buttons
+Next, we come to the buttons. You create them by creating a local variable:
+````lua
+local button = SimpleGUI.Create("Button", frame)
+````
+
+You can edit the text in the button with this:
+````lua
+button:SetText("Press me!")
+````
+
+To determine the size of the buttons use this:
+````lua
+button:SetSize(200, 400p)
+````
+The size is like in HTML, width x height in pixels.
+
+And the margin is set like the others:
+````lua
+button:Margin(10, 10, 10, 10)
+````
+
+The buttons have a special function that can also be used:
+````lua
+local button.OnClick() = function()
+    print("Button was clicked")
+````
+
+# SimpleGUI Textentrys
+These are simple text inputs that can be easily controlled.

@@ -1,0 +1,32 @@
+:root {
+    --close_button_size: 20px;
+    --title-bar-height: 24px;
+}
+
+window {
+    background-color: #282828;
+    --title-color: #3c3c3c;
+    --text-color: #ffffff;
+    border-color: #3c3c3c;
+    border-radius: 4px;
+    --border-radius-close-button: 2px;
+}
+
+label {
+    color: #ffffff;
+    --link-color: #0066cc;
+}
+
+button {
+    background-color: #505050;
+    --hover-color: #646464;
+    --text-color: #ffffff;
+}
+
+textentry {
+    background-color: #323232;
+    border-color: #505050;
+    --active-border_color: #0096ff;
+    --text-color: #ffffff;
+    --placeholder-color: #787878;
+}

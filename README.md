@@ -148,6 +148,12 @@ To set the maximum number of characters in a text input, you must use this, the 
 entry:SetMaxLength(40)
 ````
 
+If you want to read the text in the text entry use this:
+````lua
+local text = entry:GetText()
+print("Your text is:" .. text)
+````
+
 ---
 # Debug Functions
 - F2: Main Debug menu
@@ -164,6 +170,8 @@ entry:SetMaxLength(40)
 - F5: Execute the Lua callback script
 
 ## Graphics
-The tick speed is currently very high (1000) and only intended for good GPUs and CPUs. If you have a slightly less powerful PC, you should lower this a bit. Here is how:
+The tick speed is currently very high (1000) and only intended for good GPUs and CPUs. If you have a slightly less powerful PC, you should lower this a bit. Here is were:
 ````python
-
+    clock.tick(1000)
+```` 
+(in SimpleGUI.py) 

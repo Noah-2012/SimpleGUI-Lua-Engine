@@ -74,7 +74,7 @@ The ````frame```` (or whatever the name of the window it should be in) in ````Si
 
 You can now specify the text in the label:
 ````lua
-label:SetText("Some Text in here\with a newline.")
+label:SetText("Some Text in here\nwith a newline.")
 ````
 Or you can create a link with:
 ````lua

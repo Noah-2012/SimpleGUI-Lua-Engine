@@ -28,6 +28,16 @@ Here is how you set the Size:
 frame:SetSize(480, 260)
 ````
 
+You can use either:
+````lua
+frame:Center()
+````
+or:
+````lua
+frame:SetPos(300, 500)
+````
+to place the window either in the center or at a custom position.
+
 Now come the things that every window should have, but here you can turn them off.
 ````lua
 frame:SetDraggable(true)

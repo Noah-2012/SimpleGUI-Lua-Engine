@@ -3,11 +3,11 @@ SimpleGUI is a Lua engine that allows you to create windows in your own environm
 
 # Utilitys
 The window resolution is currently permanently set to 1920 x 1080, but you can change this in SimpleGUI.py:
-````lua
+````python
 screen = pygame.display.set_mode((1920, 1080), pygame.FULLSCREEN)
 ````
  If you want to use Center(), you also need to adjust the resolution in the GUIWindow class's Center() method:
-````lua
+````python
     def Center(self):
         self.x = (1920 - self.width) / 2
         self.y = (1080 - self.height) / 2

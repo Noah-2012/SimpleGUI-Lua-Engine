@@ -127,3 +127,43 @@ Everything in this function will be executed when the button is pressed.
 
 # SimpleGUI Textentrys
 These are simple text inputs that can be easily controlled.
+
+How to create a text entry:
+````lua
+local entry = SimpleGUI.Create("TextEntry", frame)
+````
+
+Here you can program a placeholder that disappears as soon as you click on it. Here's an example: 
+````lua
+entry:SetPlaceholder("Type some Thing here")
+````
+
+To adjust the size you need this:
+````lua
+entry:SetSize(200, 50)
+````
+
+To set the maximum number of characters in a text input, you must use this, the default is 50:
+````lua
+entry:SetMaxLength(40)
+````
+
+---
+# Debug Functions
+- F2: Main Debug menu
+     - Print All active Windows
+     - Show FPS
+     - Reset GUI
+     - Reload Lua Script
+     - Close
+- F3: Show Debug Log
+     - All debug print that were printed via ````debug.log````
+- F4: Show Debug Values
+     - like F3 in Minecraft
+     - F4 + shift for all attributes
+- F5: Execute the Lua callback script
+
+## Graphics
+The tick speed is currently very high (1000) and only intended for good GPUs and CPUs. If you have a slightly less powerful PC, you should lower this a bit. Here is how:
+````python
+

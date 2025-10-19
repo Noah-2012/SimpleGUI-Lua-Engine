@@ -65,3 +65,24 @@ table.insert(windows, frame)
 
 ## SimpleGUI Label
 A label is used to display simple text. You can also use ````\n```` to create a newline.
+
+You can now create a local variable with the name you want for the label. Here's how:
+````lua
+local label = SimpleGUI.Create("Label", frame)
+````
+The ````frame```` (or whatever the name of the window it should be in) in ````SimpleGUI.Create("Label", frame)```` is important because it tells the function what the parent window is. If the parent window isn't specified or doesn't exist, a ValueError occurs.
+
+You can now specify the text in the label:
+````lua
+label:SetText("Some Text in here\with a newline.")
+````
+Or you can create a link with:
+````lua
+label:SetLink("Click Me!", https://example.com)
+````
+You can't use both in one label because it will overwrite itself! 
+
+You can also specify the color for the label. It's important to enter an RGB value, not a hex value. For example:
+````lua
+label:SetColor(50, 70, 90)
+````

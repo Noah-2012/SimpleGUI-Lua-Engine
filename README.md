@@ -6,7 +6,13 @@ The window resolution is currently permanently set to 1920 x 1080, but you can c
 ````lua
 screen = pygame.display.set_mode((1920, 1080), pygame.FULLSCREEN)
 ````
- If you want to use Center(), you also need to adjust the resolution in the GUIWindow class's Center() method.
+ If you want to use Center(), you also need to adjust the resolution in the GUIWindow class's Center() method:
+````lua
+    def Center(self):
+        self.x = (1920 - self.width) / 2
+        self.y = (1080 - self.height) / 2
+        print("[GUIWINDOW] Fenster zentriert") 
+````
 
 # Lua Scripting
 The engine is based on VGUI from Garry's Mod. The syntax is very similar, and that's what ultimately gave me the idea to build something like this.

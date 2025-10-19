@@ -84,5 +84,13 @@ You can't use both in one label because it will overwrite itself!
 
 You can also specify the color for the label. It's important to enter an RGB value, not a hex value. For example:
 ````lua
-label:SetColor(50, 70, 90)
+label:SetTextColor(50, 70, 90)
 ````
+
+And now comes a function that's used in virtually every object you can create. Here, with a label:
+````lua
+label:Margin(10, 10, 10, 10)
+````
+
+The Margin function is structured and used in the following pattern: ````Margin(left, top, right, bottom)````
+As I mentioned, this function is used in every object and is the basic function for positioning objects.

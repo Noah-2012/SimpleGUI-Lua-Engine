@@ -119,9 +119,11 @@ button:Margin(10, 10, 10, 10)
 
 The buttons have a special function that can also be used:
 ````lua
-local button.OnClick() = function()
+button.OnClick = function()
     print("Button was clicked")
+end
 ````
+Everything in this function will be executed when the button is pressed.
 
 # SimpleGUI Textentrys
 These are simple text inputs that can be easily controlled.

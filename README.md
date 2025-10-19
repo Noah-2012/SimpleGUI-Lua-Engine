@@ -1,5 +1,5 @@
 # SimpleGUI-Lua-Engine
-SimpleGUI is a Lua engine that allows you to create windows in your own environment. The Lua syntax is very lightweight and customizable. \n
+SimpleGUI is a Lua engine that allows you to create windows in your own environment. The Lua syntax is very lightweight and customizable. \
 **THIS PROJECT IS CURRENTLY MOST IN GERMAN, I WILL TRANSLATE IT IN ENGLISH!**
 
 # Utilitys

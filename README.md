@@ -78,7 +78,7 @@ label:SetText("Some Text in here\nwith a newline.")
 ````
 Or you can create a link with:
 ````lua
-label:SetLink("Click Me!", https://example.com)
+label:SetLink("Click Me!", "https://example.com")
 ````
 You can't use both in one label because it will overwrite itself! 
 

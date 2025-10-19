@@ -108,7 +108,7 @@ button:SetText("Press me!")
 
 To determine the size of the buttons use this:
 ````lua
-button:SetSize(200, 400p)
+button:SetSize(200, 400)
 ````
 The size is like in HTML, width x height in pixels.
 

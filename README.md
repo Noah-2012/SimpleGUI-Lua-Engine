@@ -62,3 +62,6 @@ When you are done with all properties AND objects it is recommended to write thi
 ````lua
 table.insert(windows, frame)
 ````
+
+## SimpleGUI Label
+A label is used to display simple text. You can also use ````\n```` to create a newline.

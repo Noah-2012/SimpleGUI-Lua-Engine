@@ -7,6 +7,7 @@ The window resolution is currently fixed at 1920 x 1080, but you can change this
 ````python
 screen = pygame.display.set_mode((1920, 1080), pygame.FULLSCREEN)
 ````
+(SimpleGUI.py, Line 194)
  If you want to use Center(), you will also need to adjust the resolution in the GUIWindow class's Center() method:
 ````python
     def Center(self):
@@ -14,6 +15,7 @@ screen = pygame.display.set_mode((1920, 1080), pygame.FULLSCREEN)
         self.y = (1080 - self.height) / 2
         print("[GUIWINDOW] Fenster zentriert") 
 ````
+(SimpleGUIClasses.py, Line 64 - 67)
 
 # Getting Started
 
@@ -27,9 +29,10 @@ from SimpleGUIClasses import GUIWindow, GUILabel, GUIButton, GUITextEntry
 import SimpleGUIClasses
 from SimpleGUICSSParser import *
 ````
+(SimpleGUI.py, Line 1 - 6)
 
 ## Starting a Lua Script
-Currently, you can only change the name of the Lua script to be launched in the engine itself. The default is script.lua, 
+Currently, you can only change the name of the Lua script to be launched in the engine code itself. The default is script.lua, 
 ````python
 try:
     with open ("script.lua", "r", encoding="utf-8") as f:
@@ -40,6 +43,7 @@ except Exception as e:
     logger.error(f"Error loading script.lua: {e}")
     logger.info("Press F3 for debug log or press F5 to run Callback script.")
 ````
+(SimpleGUI.py, Line 171)
 and it is launched automatically when the engine starts.
 
 # Lua Scripting
@@ -204,4 +208,4 @@ The tick speed is currently very high (1000) and only intended for good GPUs and
 ````python
     clock.tick(1000)
 ```` 
-(in SimpleGUI.py) 
+(in SimpleGUI.py, Line 250) 

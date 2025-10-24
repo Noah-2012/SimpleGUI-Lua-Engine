@@ -7,7 +7,7 @@ The window resolution is currently fixed at 1920 x 1080, but you can change this
 ````python
 screen = pygame.display.set_mode((1920, 1080), pygame.FULLSCREEN)
 ````
-(SimpleGUI.py, Line 194)
+(SimpleGUI.py, Line 194) \
  If you want to use Center(), you will also need to adjust the resolution in the GUIWindow class's Center() method:
 ````python
     def Center(self):
@@ -43,7 +43,7 @@ except Exception as e:
     logger.error(f"Error loading script.lua: {e}")
     logger.info("Press F3 for debug log or press F5 to run Callback script.")
 ````
-(SimpleGUI.py, Line 171)
+(SimpleGUI.py, Line 171) \
 and it is launched automatically when the engine starts.
 
 # Lua Scripting

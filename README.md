@@ -2,7 +2,7 @@
 SimpleGUI is a Lua engine that allows you to create windows in your own environment. The Lua syntax is very lightweight and customizable. \
 **THE CODE AND OUTPUTS ARE CURRENTLY MOSTLY IN GERMAN, I WILL TRANSLATE IT IN ENGLISH!**
 
-# Utilitys
+# Utilities
 The window resolution is currently permanently set to 1920 x 1080, but you can change this in SimpleGUI.py:
 ````python
 screen = pygame.display.set_mode((1920, 1080), pygame.FULLSCREEN)

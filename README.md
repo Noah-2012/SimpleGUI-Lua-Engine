@@ -163,7 +163,7 @@ print("Your text is:" .. text)
      - Reload Lua Script
      - Close
 - F3: Show Debug Log
-     - All debug print that were printed via ````debug.log````
+     - All debug print that were printed via ````debug.log()````
 - F4: Show Debug Values
      - like F3 in Minecraft
      - F4 + shift for all attributes

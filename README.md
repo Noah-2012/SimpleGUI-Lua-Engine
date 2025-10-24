@@ -1,19 +1,46 @@
 # SimpleGUI-Lua-Engine
 SimpleGUI is a Lua engine that allows you to create windows in your own environment. The Lua syntax is very lightweight and customizable. \
-**THE CODE AND OUTPUTS ARE CURRENTLY MOSTLY IN GERMAN, I WILL TRANSLATE IT IN ENGLISH!**
+**THE CODE AND IT'S OUTPUTS ARE CURRENTLY MOSTLY IN GERMAN. AN ENGLISH TRANSLATION IS PLANNED.**
 
 # Utilities
 The window resolution is currently fixed at 1920 x 1080, but you can change this in SimpleGUI.py:
 ````python
 screen = pygame.display.set_mode((1920, 1080), pygame.FULLSCREEN)
 ````
- If you want to use Center(), you also need to adjust the resolution in the GUIWindow class's Center() method:
+ If you want to use Center(), you will also need to adjust the resolution in the GUIWindow class's Center() method:
 ````python
     def Center(self):
         self.x = (1920 - self.width) / 2
         self.y = (1080 - self.height) / 2
         print("[GUIWINDOW] Fenster zentriert") 
 ````
+
+# Getting Started
+
+## Start The Engine
+To start the engine, you need to run ````SimpleGUI.py````. This starts the environment and executes the Lua script (see Starting a Lua Script). You'll definitely need pygame, logging, Lula and the associated files (````SimpleGUIClasses.py```` and ````SimpleGUICSSParser.py````) in the same directory:
+````python
+import pygame
+import logging
+from lupa import LuaRuntime
+from SimpleGUIClasses import GUIWindow, GUILabel, GUIButton, GUITextEntry
+import SimpleGUIClasses
+from SimpleGUICSSParser import *
+````
+
+## Starting a Lua Script
+Currently, you can only change the name of the Lua script to be launched in the engine itself. The default is script.lua, 
+````python
+try:
+    with open ("script.lua", "r", encoding="utf-8") as f:
+        lua_code = f.read()
+
+    lua.execute(lua_code)
+except Exception as e:
+    logger.error(f"Error loading script.lua: {e}")
+    logger.info("Press F3 for debug log or press F5 to run Callback script.")
+````
+and it is launched automatically when the engine starts.
 
 # Lua Scripting
 The engine is based on VGUI from Garry's Mod. The syntax is very similar, and that's what ultimately gave me the idea to build something like this.
@@ -22,7 +49,7 @@ The most important thing is what is written at the beginning of the file:
 ````lua
 local windows = {}
 ````
-This is the list of windows for your environment and is also used in Python.
+This is the list of windows for your environment and is also used in the Engine.
 
 ## SimpleGUI Windows
 Creating windows is not difficult, the hardest thing is being able to arrange all the elements in them nicely.
@@ -125,7 +152,7 @@ end
 ````
 Everything in this function will be executed when the button is pressed.
 
-# SimpleGUI Textentrys
+# SimpleGUI Textentries
 These are simple text inputs that can be easily controlled.
 
 How to create a text entry:
@@ -168,6 +195,9 @@ print("Your text is:" .. text)
      - like F3 in Minecraft
      - F4 + shift for all attributes
 - F5: Execute the Lua callback script
+
+### debug.log()
+This Function is used to log Messages in the debug log in the open enviorment. 
 
 ## Graphics
 The tick speed is currently very high (1000) and only intended for good GPUs and CPUs. If you have a slightly less powerful PC, you should lower this a bit. Here is were:

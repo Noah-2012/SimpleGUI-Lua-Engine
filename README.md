@@ -43,7 +43,7 @@ except Exception as e:
     logger.error(f"Error loading script.lua: {e}")
     logger.info("Press F3 for debug log or press F5 to run Callback script.")
 ````
-(SimpleGUI.py, Line 171) \
+(SimpleGUI.py, Line 171 - 178) \
 and it is launched automatically when the engine starts.
 
 # Lua Scripting
